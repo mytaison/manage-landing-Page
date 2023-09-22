@@ -32,7 +32,7 @@ Users should be able to:
 
 ![Desktop Mode](./screenshot_desktop.jpeg)
 
-![Mobile Mode](./screenshot_mobile.jpeg)
+<!-- ![Mobile Mode](./screenshot_mobile.jpeg) -->
 
 ### Links
 
