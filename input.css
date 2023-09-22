@@ -1,0 +1,219 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@400;500;700&display=swap");
+
+body::before {
+  position: absolute;
+  content: "";
+  width: 100vw;
+  height: 100vh;
+  font-family: "Be Vietnam", sans-serif;
+  background-image: url(../images/bg-tablet-pattern.svg);
+  background-repeat: no-repeat;
+  background-size: 800px;
+  background-position: 128% 91%;
+  z-index: -1;
+}
+#cta {
+  background-image: url(../images/bg-simplify-section-desktop.svg);
+  background-repeat: no-repeat;
+}
+
+@keyframes opacityTransitionRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100vw);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0vw);
+  }
+}
+@keyframes opacityTransitionLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100vw);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0vw);
+  }
+}
+#testimonials-container {
+  /* min-height: 20vh; */
+  min-width: 100%;
+}
+#testimonials::before {
+  content: "";
+  position: absolute;
+  background-image: url(../images/bg-tablet-pattern.svg);
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: 800px;
+  background-position: -17% -32%;
+  z-index: -1;
+  top: 62rem;
+  left: -20rem;
+}
+footer .logo {
+  filter: brightness(100);
+}
+
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background-color: black;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+.hamburger-middle {
+  transform: translateY(7px);
+}
+.hamburger-bottom {
+  transform: translateY(14px);
+}
+.hamburger.open {
+  transform: rotate(90deg);
+  transform: translateY(0px);
+}
+.hamburger.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px);
+}
+.hamburger.open .hamburger-bottom {
+  transform: rotate(45deg) translateY(6px) translate(6px);
+}
+.hamburger.open .hamburger-middle {
+  display: none;
+}
+.hamburger.open .hamburger-top {
+  transform: rotate(-45deg) translateY(6px) translate(-6px);
+}
+@media (max-width: 565px) {
+  body::before {
+    background-size: 450px;
+    background-position: -195% -3%;
+  }
+  #cta {
+    background-image: url(../images/bg-simplify-section-mobile.svg);
+    background-position: 0% 50%;
+  }
+  #testimonials::before {
+    display: none;
+    /* background-repeat: no-repeat;
+    background-size: 450px;
+    background-position: -195% 16%;
+    top: 26rem;
+    left: 9rem; */
+  }
+  #hero p::before {
+    position: absolute;
+    content: "";
+    width: 90vw;
+    height: 90vh;
+    font-family: "Be Vietnam", sans-serif;
+    background-image: url(../images/bg-tablet-pattern.svg);
+    background-repeat: no-repeat;
+    background-size: 300px;
+    background-position: 170% -1%;
+    z-index: -1;
+  }
+}
+@media (max-width: 719px) {
+  body::before {
+    background-size: 450px;
+    background-position: 155% 12%;
+  }
+  #cta {
+    background-image: url(../images/bg-simplify-section-mobile.svg);
+    background-position: 0% 50%;
+  }
+  .testimonial {
+    animation-name: opacityTransitionRight;
+    animation-duration: 1s;
+    -webkit-animation-name: opacityTransitionRight;
+    -webkit-animation-duration: 1s;
+  }
+  #testimonials {
+    overflow: hidden;
+  }
+  #testimonials::before {
+    /* display: none; */
+    background-repeat: no-repeat;
+    background-size: 450px;
+    background-position: 50% 50%;
+  }
+  #hero p::before {
+    display: none;
+  }
+
+  #left-slider,
+  #right-slider {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    z-index: 1;
+  }
+  #left-slider {
+    margin-top: 4rem;
+  }
+  #right-slider {
+    margin-top: 4rem;
+    margin-left: calc(100% - 12px - 6rem);
+  }
+
+  #left-slider > button,
+  #right-slider > button {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100%;
+    background-color: hsl(225, 5%, 31%);
+    opacity: 0.1;
+  }
+
+  #left-slider > button:hover,
+  #right-slider > button:hover {
+    opacity: 0.8;
+  }
+}
+@media (max-width: 976px) {
+  body::before {
+    background-size: 450px;
+    background-position: 155% 12%;
+  }
+  #cta {
+    background-image: url(../images/bg-simplify-section-mobile.svg);
+    background-position: 0% 50%;
+  }
+  #testimonials::before {
+    /* display: none; */
+    background-repeat: no-repeat;
+    background-size: 450px;
+    background-position: 23% 95%;
+  }
+  #hero p::before {
+    display: none;
+  }
+}
