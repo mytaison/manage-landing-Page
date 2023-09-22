@@ -36,8 +36,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/mytaison/manage-landing-Page)
-- Live Site URL: [Add live site URL here](https://manage-landing-page.mehedihasan.pro/)
+- Solution URL: [Github](https://github.com/mytaison/manage-landing-Page)
+- Live Site URL: [https://manage-landing-page.mehedihasan.pro/](https://manage-landing-page.mehedihasan.pro/)
 
 ## My process
 
